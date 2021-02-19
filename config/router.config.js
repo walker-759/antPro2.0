@@ -40,6 +40,24 @@ export default [
           },
         ],
       },
+      // 测试
+      {
+        path: '/products',
+        name: 'products',
+        icon: 'environment',
+        routes: [
+          {
+            path: '/products/article',
+            name: 'article',
+            component: './Products/List',
+          },
+          // {
+          //   path: '/products/movies',
+          //   name: 'movies',
+          //   component: './Dashboard/Analysis',
+          // },
+        ],
+      },
       // forms
       {
         path: '/form',

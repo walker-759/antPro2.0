@@ -160,6 +160,7 @@ class BasicLayout extends React.PureComponent {
     });
     if (!currRouterData) {
       return 'Ant Design Pro';
+      // return 'test';
     }
     const message = formatMessage({
       id: currRouterData.locale || currRouterData.name,
