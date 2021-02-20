@@ -73,6 +73,7 @@ class Analysis extends Component {
   };
 
   componentDidMount() {
+    // console.log(this.props);
     const { dispatch } = this.props;
     this.reqRef = requestAnimationFrame(() => {
       dispatch({
@@ -457,9 +458,8 @@ class Analysis extends Component {
                         {this.rankingListData.map((item, i) => (
                           <li key={item.title}>
                             <span
-                              className={`${styles.rankingItemNumber} ${
-                                i < 3 ? styles.active : ''
-                              }`}
+                              className={`${styles.rankingItemNumber} ${i < 3 ? styles.active : ''
+                                }`}
                             >
                               {i + 1}
                             </span>

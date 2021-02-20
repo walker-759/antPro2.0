@@ -49,13 +49,18 @@ export default [
           {
             path: '/products/article',
             name: 'article',
-            component: './Products/List',
+            component: './Products/Article',
           },
-          // {
-          //   path: '/products/movies',
-          //   name: 'movies',
-          //   component: './Dashboard/Analysis',
-          // },
+          {
+            path: '/products/RoleAuthority',
+            name: 'RoleAuthority',
+            component: './Products/RoleAuthority',
+          },
+          {
+            path: 'https://pro.ant.design/docs/getting-started-cn',
+            target: '_blank', // 点击新窗口打开
+            name: "newWindow",
+          }
         ],
       },
       // forms
