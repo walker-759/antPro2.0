@@ -13,11 +13,15 @@ export default [
   // app
   {
     path: '/',
+    // 代表着一级路由渲染BasicLayout布局
     component: '../layouts/BasicLayout',
     Routes: ['src/pages/Authorized'],
     routes: [
-      // dashboard
-      { path: '/', redirect: '/dashboard/analysis' },
+      // 代表二级路由
+      // 默认访问/就给他定向到指定的路由
+      { path: '/', redirect: './HomePage' },
+      // 这一条就是首页的路由
+      { path: '/HomePage', name: 'home',component:'./HomePage' },
       {
         path: '/dashboard',
         name: 'dashboard',
@@ -42,6 +46,7 @@ export default [
       },
       // 测试
       {
+        // 菜单 也就是一级路由
         path: '/products',
         name: 'products',
         icon: 'environment',

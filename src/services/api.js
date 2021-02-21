@@ -124,3 +124,40 @@ export async function queryNotices() {
 export async function getFakeCaptcha(mobile) {
   return request(`/api/captcha?mobile=${mobile}`);
 }
+
+
+
+export async function queryArtical(params) {
+  return request(`/api/artical?${stringify(params)}`);
+}
+
+
+export async function removeArtical(params) {
+  return request('/api/artical', {
+    method: 'POST',
+    body: {
+      ...params,
+      method: 'delete',
+    },
+  });
+}
+
+export async function addArtical(params) {
+  return request('/api/artical', {
+    method: 'POST',
+    body: {
+      ...params,
+      method: 'post',
+    },
+  });
+}
+
+export async function updateArtical(params) {
+  return request('/api/artical', {
+    method: 'POST',
+    body: {
+      ...params,
+      method: 'update',
+    },
+  });
+}
