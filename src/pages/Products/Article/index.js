@@ -489,6 +489,14 @@ class TableList extends PureComponent {
     message.success('配置成功');
     this.handleUpdateModalVisible();
   };
+  
+  handletest = () => {
+    // console.log(1);
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'artical/httptest',
+    })
+  }
 
   renderSimpleForm() {
     const {
@@ -609,6 +617,8 @@ class TableList extends PureComponent {
     return expandForm ? this.renderAdvancedForm() : this.renderSimpleForm();
   }
 
+  
+
   render() {
     const {
       artical: { data },
@@ -638,6 +648,9 @@ class TableList extends PureComponent {
             <div className={styles.tableListOperator}>
               <Button icon="plus" type="primary" onClick={() => this.handleModalVisible(true)}>
                 新建
+              </Button>
+              <Button icon="plus" type="primary" onClick={this.handletest}>
+                测试
               </Button>
               {selectedRows.length > 0 && (
                 <span>

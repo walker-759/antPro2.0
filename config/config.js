@@ -36,9 +36,17 @@ export default {
   routes: pageRoutes,
   // Theme for antd
   // https://ant.design/docs/react/customize-theme-cn
+  // 修改主题
   theme: {
     'primary-color': defaultSettings.primaryColor,
     // 'font-size-base': '14px'
+  },
+  proxy: {
+    '/api': {
+      'target': 'http://jsonplaceholder.typicode.com/',
+      'changeOrigin': true,
+      'pathRewrite': { '^/api' : '' },
+    },
   },
   externals: {
     '@antv/data-set': 'DataSet',

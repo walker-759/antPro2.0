@@ -1,4 +1,4 @@
-import { queryArtical, removeArtical, addArtical, updateArtical } from '@/services/api';
+import { queryArtical, removeArtical, addArtical, updateArtical, httptest } from '@/services/api';
 
 export default {
   namespace: 'artical',
@@ -41,6 +41,15 @@ export default {
         payload: response,
       });
       if (callback) callback();
+    },
+    *httptest({ payload, callback }, { call, put }) {
+      const response = yield call(httptest, payload);
+      console.log(response);
+      // yield put({
+      //   type: 'save',
+      //   payload: response,
+      // });
+      // if (callback) callback();
     },
   },
 

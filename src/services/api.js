@@ -161,3 +161,8 @@ export async function updateArtical(params) {
     },
   });
 }
+export async function httptest() {
+  return request('/api/users', {
+    method: 'GET',
+  });
+}
